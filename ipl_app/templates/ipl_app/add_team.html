@@ -1,0 +1,18 @@
+{% extends "ipl_app/base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Team</title>
+</head>
+<body>
+    <h1>Add Team</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Team</button>
+    </form>
+</body>
+</html>
+{% endblock %}
+

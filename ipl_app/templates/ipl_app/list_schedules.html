@@ -1,0 +1,23 @@
+{% extends "ipl_app/base.html" %}
+
+{% block title %}List of Schedules{% endblock %}
+
+{% block content %}
+<h2>List of Schedules</h2>
+<table border="1">
+    <tr>
+        <th>Match Date</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+        <th>Stadium</th>
+    </tr>
+    {% for schedule in schedules %}
+    <tr>
+        <td>{{ schedule.match_date }}</td>
+        <td>{{ schedule.team1.team }}</td>
+        <td>{{ schedule.team2.team }}</td>
+        <td>{{ schedule.stadium.name }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
